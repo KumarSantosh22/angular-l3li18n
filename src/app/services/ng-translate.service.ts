@@ -6,12 +6,11 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class NgTranslateService {
   constructor(private translate: TranslateService) {
-    translate.addLangs(['en', 'fr']);
-    translate.setDefaultLang('en');
+    this.init();
   }
 
   init(){
-    this.translate.addLangs(['en', 'fr']);
+    this.translate.addLangs(['en', 'fr', 'ru', 'ar', 'hi']);
     this.translate.setDefaultLang('en');
   }
 
