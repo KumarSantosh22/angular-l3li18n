@@ -20,8 +20,7 @@
         <li class="nav-item">
           <select #selectedLang class="form-select" aria-label="Default select example"
           (change)="translator.switchLang(selectedLang.value)">
-            <option selected>{{translator.getCurrentLang()}}</option>
-            <option [value]="lang" *ngFor="let lang of languages">
+            <option [value]="lang" [selected]="translator.getCurrentLang()" *ngFor="let lang of languages">
                 {{lang}}
             </option>
           </select>
@@ -32,4 +31,6 @@
   </div>
 </nav>
 
-{{'title' | translate}}
+{{'hello' | translate}}
+<br>
+<button translate>hello</button>
