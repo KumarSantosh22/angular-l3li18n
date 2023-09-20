@@ -7,7 +7,7 @@ import { NgTranslateService } from './services/ng-translate.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  title = 'angular-l3li18n';
+  title = 'angular-local&global~ization';
   languages: string[] = [];
   selectedLanguage!:string;
 
@@ -16,8 +16,7 @@ export class AppComponent implements OnInit {
   
   ngOnInit(): void {
     this.languages = this.translator.getLangs();
-    this.selectedLanguage = this.translator.getCurrentLang();
-    console.log('s', this.languages);      
+    this.selectedLanguage = this.translator.getCurrentLang(); 
   }
 
   onLangChange(lang: string){

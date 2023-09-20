@@ -1,40 +1,43 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
-        </li>
+<body [dir]="translator.direction" class="p-3">
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Pricing</a>
+          </li>
 
-        <li class="nav-item">
-          <select #selectedLang class="form-select" aria-label="Default select example"
-          (change)="onLangChange(selectedLang.value);translator.switchLang(selectedLang.value)">
-            <option [value]="lang" [selected]="selectedLanguage == lang" *ngFor="let lang of languages">
+          <li class="nav-item">
+            <select #selectedLang class="form-select" aria-label="Default select example"
+              (change)="onLangChange(selectedLang.value);translator.switchLang(selectedLang.value)">
+              <option [value]="lang" [selected]="selectedLanguage == lang" *ngFor="let lang of languages">
                 {{lang}}
-            </option>
-          </select>
-        </li>
+              </option>
+            </select>
+          </li>
 
-      </ul>
+        </ul>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
-<div class="container">
-  <br>
-{{'hello' | translate}}
-<br>
-<br>
-<button translate>hello</button>
-</div>
+  <div class="container">
+    <br>
+    {{'hello' | translate}}
+    <br>
+    <br>
+    <button translate>hello</button>
+  </div>
+  {{translator.direction}}
+</body>
