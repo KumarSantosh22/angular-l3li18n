@@ -1,0 +1,12 @@
+{
+    "statusCode": 200,
+    "data": [
+        {
+            "key": "hello",
+            "value": "नमस्ते"
+        }
+    ],
+    "isSucceed": true,
+    "message": null,
+    "error": null
+}
